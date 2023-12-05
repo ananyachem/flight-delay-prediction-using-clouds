@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Delays Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        form {
+            margin: 20px auto;
+            width: 400px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        form p {
+            margin: 10px 0;
+        }
+        
+        form input[type="text"],
+        form select {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        form input[type="submit"] {
+            width: auto;
+            padding: 8px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        b {
+            display: block;
+            margin: 20px auto;
+            width: 400px;
+            padding: 10px;
+            background-color: #eaeaea;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Welcome to Flight Delays Web Page</h1>
+    </center>
+    <form action="/prediction" method="post">
+        <p>Flight Number</p>
+        <p><input type="text" name="name" /></p>
+        
+        <p>Month</p>
+        <p><input type="text" name="month" /></p>
+        
+        <p>Day of Month</p>
+        <p><input type="text" name="dayofmonth" /></p>
+        
+        <p>Day of Week</p>
+        <p><input type="text" name="dayofweek" /></p>
+        
+        <label for="origin">Origin</label>
+        <select name="origin">
+            <option value="ATL">ATL</option>
+            <option value="DTW">DTW</option>
+            <option value="JFK">JFK</option>
+            <option value="MSP">MSP</option>
+            <option value="SEA">SEA</option>
+        </select>
+        
+        <label for="destination">Destination</label>
+        <select name="destination">
+            <option value="ATL">ATL</option>
+            <option value="DTW">DTW</option>
+            <option value="JFK">JFK</option>
+            <option value="MSP">MSP</option>
+            <option value="SEA">SEA</option>
+        </select>
+        
+        <p>Scheduled Departure Time</p>
+        <p><input type="text" name="dept" /></p>
+        
+        <p>Scheduled Arrival Time</p>
+        <p><input type="text" name="arrtime" /></p>
+        
+        <p>Actual Departure Time</p>
+        <p><input type="text" name="actdept" /></p>
+        
+        <p><input type="submit" value="Submit" /></p>
+    </form>
+    
+    <b>{{ showcase }}</b>
+</body>
+</html>
+
